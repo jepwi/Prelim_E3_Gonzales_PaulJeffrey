@@ -6,7 +6,11 @@ import Settings from "./components/Settings";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  const [user, setUser] = useState({ name: "Paul Jeffrey", settings: { darkMode: false } });
+  // User state with nested settings object
+  const [user, setUser] = useState({
+    name: "Paul Jeffrey",
+    settings: { darkMode: false }
+  });
 
   return (
     <Router>
@@ -20,6 +24,7 @@ function App() {
             </div>
           </div>
         </nav>
+
         <div className="container py-4">
           <Routes>
             <Route path="/" element={<Home />} />
